@@ -15,7 +15,7 @@ export async function generateStaticParams({
   const { pageBlogPostCollection } = await gqlClient.pageBlogPostCollection({ locale, limit: 100 });
 
   if (!pageBlogPostCollection?.items) {
-    throw new Error('No blog posts found');
+    throw new Error('No blog posts found here');
   }
 
   return pageBlogPostCollection.items
